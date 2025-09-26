@@ -1,6 +1,9 @@
-version: '3'
 services:
   geoserver:
-    image: geonode/geoserver:latest
+    image: geonode/geoserver::2.24.4-v2
+    ports:
+      - "8080:80"
+  adminer:
+    image: geonode/geoserver::2.24.4-v2
     ports:
       - "8080:8080"
