@@ -10,5 +10,6 @@ services:
       - GEOSERVER_PROXY_HOST=dariadanilova23-geoserver-docker-03da.twc1.net
       - GEOSERVER_PROXY_SCHEME=https
       - GEOSERVER_ENABLE_CORS=true
+      - GEOSERVER_CSRF_DISABLED=false
     ports:
       - "8080:8080"
