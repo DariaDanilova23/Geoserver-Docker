@@ -10,5 +10,7 @@ services:
       GEOSERVER_CSRF_DISABLED: "true"
       GEOSERVER_ADMIN_USER: "admin"
       GEOSERVER_ADMIN_PASSWORD: "123admin"
+    volumes:
+      - ./oauth2:/opt/geoserver/webapps/geoserver/WEB-INF/lib
     ports:
       - "8080:8080"
