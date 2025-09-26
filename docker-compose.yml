@@ -6,5 +6,6 @@ services:
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
       GEOSERVER_CSRF_WHITELIST: 'dariadanilova23-geoserver-docker-03da.twc1.net'
+      PROXY_BASE_URL: 'https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver'
     ports:
       - "8080:8080"
