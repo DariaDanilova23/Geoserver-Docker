@@ -7,5 +7,6 @@ services:
       - GEOSERVER_ADMIN_USER=admin
       - GEOSERVER_ADMIN_PASSWORD=geoserver
       - GEOSERVER_PROXY_BASE_URL=https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver
+      - GEOSERVER_ENABLE_CORS=true
     ports:
       - "8080:8080"
