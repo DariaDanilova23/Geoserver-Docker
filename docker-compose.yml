@@ -3,9 +3,5 @@ services:
   geoserver:
     image: docker.osgeo.org/geoserver:2.27.2
     restart: unless-stopped
-    environment:
-      - GEOSERVER_ADMIN_USER=admin
-      - GEOSERVER_ADMIN_PASSWORD=geoserver
-      - GEOSERVER_PROXY_BASE_URL=https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver
     ports:
       - "8080:8080"
