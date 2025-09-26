@@ -7,5 +7,6 @@ services:
       GEOSERVER_CSRF_DISABLED: "false"
       GEOSERVER_CSRF_WHITELIST: 'dariadanilova23-geoserver-docker-03da.twc1.net'
       PROXY_BASE_URL: 'https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver'
+      GEOSERVER_ADMIN_PASSWORD: '123admin'
     ports:
       - "8080:8080"
