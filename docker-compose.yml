@@ -1,7 +1,7 @@
 version: "3"
 services:
   geoserver:
-    image: docker.osgeo.org/geoserver:2.28.x
+    image: thedaritos/geoserver-with-oauth2:1.0
     restart: unless-stopped
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
@@ -10,7 +10,5 @@ services:
       GEOSERVER_CSRF_DISABLED: "true"
       GEOSERVER_ADMIN_USER: "admin"
       GEOSERVER_ADMIN_PASSWORD: "123admin"
-    volumes:
-      - ./oauth2:/opt/geoserver/webapps/geoserver/WEB-INF/lib
     ports:
       - "8080:8080"
