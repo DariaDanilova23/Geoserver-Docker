@@ -13,4 +13,4 @@ services:
     ports:
       - "8080:8080"
     volumes: 
-      - ./oauth2:webapps/geoserver/WEB-INF/lib
+      - ./oauth2:/opt/geoserver/webapps/geoserver/WEB-INF/lib
