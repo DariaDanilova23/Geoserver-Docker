@@ -1,7 +1,7 @@
 version: "3"
 services:
   geoserver:
-    image: docker.osgeo.org/geoserver:2.28.x
+    image: docker.osgeo.org/geoserver:2.27.2
     restart: unless-stopped
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
@@ -12,5 +12,3 @@ services:
       GEOSERVER_ADMIN_PASSWORD: "123admin"
     ports:
       - "8080:8080"
-    volumes:
-      = ./oauth2:/opt/geoserver/webapps/geoserver/WEB-INF/lib
