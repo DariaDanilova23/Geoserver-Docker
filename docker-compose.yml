@@ -1,7 +1,7 @@
 version: "3"
 services:
   geoserver:
-    image: docker.osgeo.org/geoserver:2.28.x
+    image: thedaritos/geoserver-with-oauth2
     restart: unless-stopped
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
