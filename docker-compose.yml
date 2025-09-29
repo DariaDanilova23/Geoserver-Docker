@@ -1,7 +1,7 @@
-version: "3.1"
+version: "4"
 services:
   geoserver:
-    image: thedaritos/geoserver-with-oauth2:1.1
+    image: kartoza/geoserver:2.27.2
     restart: unless-stopped
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
