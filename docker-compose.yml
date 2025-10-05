@@ -1,6 +1,6 @@
 version: "3"
 services:
   geoserver:
-    image: kartoza/geoserver:2.25.2
+    image: docker.osgeo.org/geoserver:2.28.x
     ports:
-      - "9090:8080"
+      - "8080:8080"
