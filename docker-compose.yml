@@ -2,6 +2,5 @@ version: "3"
 services:
   geoserver:
     image: kartoza/geoserver:2.25.2
-    restart: unless-stopped
     ports:
       - "9090:8080"
