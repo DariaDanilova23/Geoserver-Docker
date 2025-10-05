@@ -1,6 +1,26 @@
-version: "3"
 services:
-  geoserver:
-    image: docker.osgeo.org/geoserver:2.28.x
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:80
+    environment:
+      DATABASE_URL: postgres://postgres@database_default:5432/db
+    links:
+      - 'database_default'
     ports:
-      - "8080:8080"
+      - '8000:80'
+    volumes:
+      - '.:/app:rw'
+      - './data:/data:rw'
+
+  database_default:
+    image: postgres:15.7-alpine
+    environment:
+      POSTGRES_DB: 'db'
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+      SERVICE_MANAGER: 'fsm-postgres'
+    volumes:
+      - '.:/app:rw'
+      - 'database-default:/var/lib/postgresql/data/'
+
+volumes:
+  database-default:
