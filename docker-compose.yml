@@ -5,8 +5,6 @@ services:
     restart: unless-stopped
     environment:
       GEOSERVER_CSRF_DISABLED: "false"
-      GEOSERVER_CSRF_WHITELIST: 'dariadanilova23-geoserver-docker-03da.twc1.net'
-      PROXY_BASE_URL: 'https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver'
       GEOSERVER_CSRF_DISABLED: "true"
       GEOSERVER_ADMIN_USER: "admin"
       GEOSERVER_ADMIN_PASSWORD: "123admin"
