@@ -1,9 +1,16 @@
 version: "3"
 services:
   geoserver:
-    image: geonode/geoserver:2.27.x-latest
+    image: docker.osgeo.org/geoserver:2.28.x
     restart: unless-stopped
+    environment:
+      GEOSERVER_CSRF_DISABLED: "false"
+      GEOSERVER_CSRF_WHITELIST: 'dariadanilova23-geoserver-docker-03da.twc1.net'
+      PROXY_BASE_URL: 'https://dariadanilova23-geoserver-docker-03da.twc1.net/geoserver'
+      GEOSERVER_CSRF_DISABLED: "true"
+      GEOSERVER_ADMIN_USER: "admin"
+      GEOSERVER_ADMIN_PASSWORD: "123admin"
     volumes:
-      - ./geoserver_data:/opt/geoserver_data
+      - ./oauth2:/opt/geoserver/webapps/geoserver/WEB-INF/lib
     ports:
-      - "8080:80"
+      - "8080:8080"
